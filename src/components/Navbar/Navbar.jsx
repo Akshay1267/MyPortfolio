@@ -1,6 +1,7 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { FiMenu, FiX } from "react-icons/fi";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { SiLeetcode } from "react-icons/si";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -31,7 +32,6 @@ const Navbar = () => {
   const menuItems = [
     { id: "about", label: "About" },
     { id: "skills", label: "Skills" },
-    { id: "experience", label: "Experience" },
     { id: "work", label: "Projects" },
     { id: "education", label: "Education" },
   ];
@@ -46,9 +46,9 @@ const Navbar = () => {
         {/* Logo */}
         <div className="text-lg font-semibold cursor-pointer">
           <span className="text-[#8245ec]">&lt;</span>
-          <span className="text-white">Tarun</span>
+          <span className="text-white">Akshay</span>
           <span className="text-[#8245ec]">/</span>
-          <span className="text-white">Kaushik</span>
+          <span className="text-white">Jain</span>
           <span className="text-[#8245ec]">&gt;</span>
         </div>
 
@@ -68,26 +68,33 @@ const Navbar = () => {
           ))}
         </ul>
 
-        {/* Social Icons */}
-        <div className="hidden md:flex space-x-4">
-          <a
-            href="https://github.com/codingmastr"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-gray-300 hover:text-[#8245ec]"
-          >
-            <FaGithub size={24} />
-          </a>
-          <a
-            href="https://www.linkedin.com/in/tarun-kaushik-553b441a4"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-gray-300 hover:text-[#8245ec]"
-          >
-            <FaLinkedin size={24} />
-          </a>
-        </div>
-
+        {/* Social icons  */}
+          <div className="hidden md:flex space-x-4">
+            <a
+              href="https://www.linkedin.com/in/akshay-jain-8816252a5/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gray-300 hover:text-[#8245ec"
+            >
+              <FaLinkedin size={26}></FaLinkedin>
+            </a>
+            <a
+              href="https://github.com/Akshay1267"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gray-300 hover:text-[#8245ec"
+            >
+              <FaGithub size={26}></FaGithub>
+            </a>
+            <a
+              href="https://leetcode.com/u/Mvq3wZAa8G/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gray-300 hover:text-[#8245ec"
+            >
+              <SiLeetcode size={26} />
+            </a>
+          </div>
         {/* Mobile Menu Icon */}
         <div className="md:hidden">
           {isOpen ? (
