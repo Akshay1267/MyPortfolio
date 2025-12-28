@@ -25,7 +25,7 @@ const About = () => {
             <span className="text-white">I am a </span>
             <ReactTypingEffect
               text={[
-                'Frontend Developer',
+                'Full Stack Web Developer',
                 'Coder',
                 'MCA Student'
               ]}
@@ -40,13 +40,13 @@ const About = () => {
           </h3>
           {/* About Me Paragraph */}
           <p className="text-base sm:text-lg md:text-lg text-gray-400 mb-10 mt-8 leading-relaxed">
-            Hi, I'm Akshay Jain — an aspiring Frontend Developer with a passion for building clean, responsive, and user-friendly web interfaces. I enjoy working with technologies like HTML, CSS, JavaScript, React, and Tailwind CSS to bring creative ideas to life. I'm constantly learning and exploring new tools to improve my skills and stay updated in the ever-evolving tech world. Whether it’s designing a personal project or contributing to a team, I thrive on solving problems and creating meaningful digital experiences.
+           Hi, I'm Akshay Jain, an aspiring MERN Stack Developer passionate about building scalable and user-friendly web applications. I work with MongoDB, Express.js, React, and Node.js, along with HTML, CSS, JavaScript, and Tailwind CSS, to create end-to-end solutions. I enjoy learning new technologies, solving real-world problems, and developing efficient, modern web applications.
 
 
           </p>
           {/* Resume Button */}
           <a
-            href="https://drive.google.com/file/d/1VfE66OKFOapBM2Fbhlb78ORSXHRiXPBv/view?usp=sharing"
+            href="https://drive.google.com/file/d/1hQSrsU6S68Gt1-DvgOlflGl0MNIBDKvy/view?usp=sharing"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-block text-white py-3 px-8 rounded-full mt-5 text-lg font-bold transition duration-300 transform hover:scale-105"

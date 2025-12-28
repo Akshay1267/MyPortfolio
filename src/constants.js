@@ -16,6 +16,11 @@ import githubLogo from "./assets/tech_logo/github.png";
 import vscodeLogo from "./assets/tech_logo/vscode.png";
 import postmanLogo from "./assets/tech_logo/postman.png";
 import vercelLogo from "./assets/tech_logo/vercel.png";
+import nodejsLogo from "./assets/tech_logo/nodejs.png";
+import expressLogo from "./assets/tech_logo/express.png";
+import mongodbLogo from "./assets/tech_logo/mongodb.png";
+// import mongooseLogo from "./assets/tech_logo/mongoose.png";
+
 
 // Education Section Logo's
 import ddumcLogo from "./assets/education_logo/ddumcLogo.png";
@@ -41,6 +46,15 @@ export const SkillsInfo = [
       { name: "Tailwind CSS", logo: tailwindcssLogo },
       { name: "Material UI", logo: materialuiLogo },
       { name: "Bootstrap", logo: bootstrapLogo },
+    ],
+  },
+  {
+    title: "Backend (MERN)",
+    skills: [
+      { name: "Node JS", logo: nodejsLogo },
+      { name: "Express JS", logo: expressLogo },
+      { name: "MongoDB", logo: mongodbLogo },
+      // { name: "Mongoose", logo: mongooseLogo },
     ],
   },
   {
@@ -114,6 +128,17 @@ export const projects = [
     github: "https://github.com/Akshay1267/Rock-Paper-Game.git",
     webapp: "https://rock-paper-game-smoky.vercel.app/",
   },
+  {
+  id: 1,
+  title: "AI Chatbot",
+  description:
+    "An AI-powered chatbot built using modern web technologies that can understand user queries and respond intelligently in real time. Features a clean UI, message history, and seamless API integration.",
+  // image: chatbotLogo,
+  tags: ["React", "JavaScript", "AI", "API"],
+  github: "https://github.com/Akshay1267/AI-ChatBot.git",
+  webapp: "https://ai-chat-bot-liart-delta.vercel.app/",
+},
+
   {
     id: 1,
     title: "Currency Converter",
