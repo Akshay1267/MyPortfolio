@@ -328,6 +328,7 @@ export const certifications = [
     title: "AWS Certified Cloud Practitioner (CLF-C02)",
     issuer: "Amazon Web Services (AWS)",
     category: "Cloud Computing",
+    credentialUrl: "https://drive.google.com/file/d/1RFj3iJ1vsLOWAkMfNaglXdAJg6EKo8wc/view?usp=sharing",
     badgeColor: "from-amber-500 to-orange-500",
     icon: "aws",
     description: "Validates comprehensive understanding of AWS Cloud concepts, fundamental cloud services (EC2, S3, RDS, Lambda), security, architecture best practices, pricing, and compliance.",

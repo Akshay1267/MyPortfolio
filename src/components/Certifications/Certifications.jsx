@@ -1,7 +1,8 @@
 import React from "react";
 import { certifications } from "../../constants";
-import { FaAward, FaCheckCircle, FaCloud, FaBrain, FaTrophy, FaCode } from "react-icons/fa";
+import { FaAward, FaCheckCircle, FaTrophy, FaCode } from "react-icons/fa";
 import { SiAmazonwebservices, SiOracle } from "react-icons/si";
+import { FiExternalLink } from "react-icons/fi";
 
 const getCertIcon = (iconName) => {
   switch (iconName) {
@@ -64,10 +65,12 @@ const Certifications = () => {
                 </div>
               </div>
 
-              {/* Issuer */}
-              <div className="flex items-center space-x-2 text-sm font-semibold text-amber-700 mb-3">
-                <FaCheckCircle className="text-amber-600" />
-                <span>Issued by {cert.issuer}</span>
+              {/* Issuer & Link */}
+              <div className="flex items-center justify-between flex-wrap gap-2 text-sm font-semibold text-amber-700 mb-3">
+                <div className="flex items-center space-x-2">
+                  <FaCheckCircle className="text-amber-600" />
+                  <span>Issued by {cert.issuer}</span>
+                </div>
               </div>
 
               {/* Description */}
@@ -76,21 +79,35 @@ const Certifications = () => {
               </p>
             </div>
 
-            {/* Skills / Key Takeaways */}
-            <div className="pt-4 border-t border-warm-200">
-              <p className="text-xs font-bold text-stone-400 uppercase tracking-wider mb-2">
-                Core Competencies
-              </p>
-              <div className="flex flex-wrap gap-1.5">
-                {cert.skills.map((skill, i) => (
-                  <span
-                    key={i}
-                    className="text-xs font-medium bg-amber-50/70 text-amber-900 border border-amber-200/60 px-2.5 py-1 rounded-md"
-                  >
-                    {skill}
-                  </span>
-                ))}
+            {/* Skills & Credential Link */}
+            <div className="pt-4 border-t border-warm-200 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+              <div>
+                <p className="text-xs font-bold text-stone-400 uppercase tracking-wider mb-2">
+                  Core Competencies
+                </p>
+                <div className="flex flex-wrap gap-1.5">
+                  {cert.skills.map((skill, i) => (
+                    <span
+                      key={i}
+                      className="text-xs font-medium bg-amber-50/70 text-amber-900 border border-amber-200/60 px-2.5 py-1 rounded-md"
+                    >
+                      {skill}
+                    </span>
+                  ))}
+                </div>
               </div>
+
+              {cert.credentialUrl && (
+                <a
+                  href={cert.credentialUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="self-start sm:self-end flex-shrink-0 inline-flex items-center space-x-1.5 px-4 py-2 rounded-xl text-xs font-bold text-white bg-gradient-to-r from-amber-600 to-orange-500 hover:from-amber-700 hover:to-orange-600 shadow-warm-sm transition-all transform hover:-translate-y-0.5"
+                >
+                  <span>View Certificate</span>
+                  <FiExternalLink size={13} />
+                </a>
+              )}
             </div>
           </div>
         ))}
