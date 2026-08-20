@@ -1,66 +1,93 @@
 import React from "react";
-import { FaFacebook, FaTwitter, FaLinkedin, FaInstagram, FaYoutube } from "react-icons/fa";
+import { FaLinkedin, FaGithub, FaYoutube, FaInstagram, FaTwitter } from "react-icons/fa";
+import { SiLeetcode } from "react-icons/si";
+import { PersonalDetails } from "../../constants";
 
 const Footer = () => {
-  // Smooth scroll function
   const handleScroll = (sectionId) => {
     const section = document.getElementById(sectionId);
     if (section) {
-      section.scrollIntoView({ behavior: "smooth" });
+      const navOffset = 80;
+      const elementPosition = section.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - navOffset;
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth"
+      });
     }
   };
 
-  return (
-    <footer className="text-white py-8 px-[12vw] md:px-[7vw] lg:px-[20vw]">
-      <div className="container mx-auto text-center">
-        {/* Name / Logo */}
-        <h2 className="text-xl font-semibold text-purple-500">Akshay Jain</h2>
+  const navLinks = [
+    { name: "About", id: "about" },
+    { name: "Skills", id: "skills" },
+    { name: "Projects", id: "projects" },
+    { name: "Education", id: "education" },
+    { name: "Certifications", id: "certifications" },
+    { name: "Contact", id: "contact" },
+  ];
 
-        {/* Navigation Links - Responsive */}
-        <nav className="flex flex-wrap justify-center space-x-4 sm:space-x-6 mt-4">
-          {[
-            { name: "About", id: "about" },
-            { name: "Skills", id: "skills" },
-            { name: "Experience", id: "experience" },
-            { name: "Projects", id: "projects" },
-            { name: "Education", id: "education" },
-          ].map((item, index) => (
+  const socialLinks = [
+    { icon: <FaLinkedin size={18} />, link: PersonalDetails.linkedin, label: "LinkedIn" },
+    { icon: <FaGithub size={18} />, link: PersonalDetails.github, label: "GitHub" },
+    { icon: <SiLeetcode size={18} />, link: PersonalDetails.leetcode, label: "LeetCode" },
+    { icon: <FaYoutube size={18} />, link: PersonalDetails.youtube, label: "YouTube" },
+    { icon: <FaInstagram size={18} />, link: PersonalDetails.instagram, label: "Instagram" },
+    { icon: <FaTwitter size={18} />, link: PersonalDetails.twitter, label: "Twitter" },
+  ];
+
+  return (
+    <footer className="bg-white border-t border-warm-300 py-12 px-4 sm:px-8 lg:px-16 mt-16">
+      <div className="max-w-7xl mx-auto flex flex-col items-center text-center">
+        {/* Brand */}
+        <div
+          onClick={() => handleScroll("about")}
+          className="text-2xl font-bold tracking-tight cursor-pointer flex items-center mb-3 group"
+        >
+          <span className="text-amber-600 font-mono text-2xl mr-0.5">&lt;</span>
+          <span className="text-stone-900 font-extrabold">Akshay</span>
+          <span className="text-amber-500 mx-0.5">/</span>
+          <span className="text-stone-700 font-bold">Jain</span>
+          <span className="text-amber-600 font-mono text-2xl ml-0.5">&gt;</span>
+        </div>
+
+        <p className="text-stone-500 text-sm max-w-md mb-6">
+          Full Stack MERN Developer & MCA Student at MIET Meerut. Building scalable software with intuitive user experiences.
+        </p>
+
+        {/* Navigation Links */}
+        <nav className="flex flex-wrap justify-center gap-4 sm:gap-8 mb-8">
+          {navLinks.map((item) => (
             <button
-              key={index}
+              key={item.id}
               onClick={() => handleScroll(item.id)}
-              className="hover:text-purple-500 text-sm sm:text-base my-1"
+              className="text-sm font-semibold text-stone-600 hover:text-amber-700 transition-colors"
             >
               {item.name}
             </button>
           ))}
         </nav>
 
-        {/* Social Media Icons - Responsive */}
-        <div className="flex flex-wrap justify-center space-x-4 mt-6">
-          {[
-            { icon: <FaFacebook />, link: "https://www.facebook.com/share/15pdvYNzGt/" },
-            { icon: <FaTwitter />, link: "https://x.com/jain86845" },
-            { icon: <FaLinkedin />, link: "https://www.linkedin.com/in/akshay-jain-8816252a5/" },
-            { icon: <FaInstagram />, link: "https://www.instagram.com/akshay_jain86/?utm_source=ig_web_button_share_sheet" },
-            { icon: <FaYoutube />, link: "https://www.youtube.com/@Code2CareerByAkshay" },
-            
-          ].map((item, index) => (
+        {/* Social Icons */}
+        <div className="flex flex-wrap justify-center gap-3 mb-8">
+          {socialLinks.map((item, index) => (
             <a
               key={index}
               href={item.link}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-xl hover:text-purple-500 transition-transform transform hover:scale-110"
+              aria-label={item.label}
+              className="p-3 rounded-full bg-warm-100 text-stone-700 hover:text-white hover:bg-amber-600 transition-all duration-200 shadow-warm-sm hover:scale-105"
             >
               {item.icon}
             </a>
           ))}
         </div>
 
-        {/* Copyright Text */}
-        <p className="text-sm text-gray-400 mt-6">
-          © 2025 Akshay Jain. All rights reserved.
-        </p>
+        {/* Divider */}
+        <div className="w-full max-w-3xl border-t border-warm-200 pt-6 flex flex-col sm:flex-row items-center justify-between text-xs text-stone-400 gap-2">
+          <p>© {new Date().getFullYear()} Akshay Jain. Built with React & Tailwind CSS.</p>
+          <p>Meerut, Uttar Pradesh, India</p>
+        </div>
       </div>
     </footer>
   );

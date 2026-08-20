@@ -1,26 +1,80 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --bg-warm-canvas: #FAF8F5;
+  --bg-card-surface: #FFFFFF;
+  --text-primary: #1C1917;
+  --text-secondary: #57534E;
+  --border-warm: #EBE5DB;
+  --accent-amber: #D97706;
+}
+
 * {
-    font-family: "Poppins", sans-serif;
+  font-family: 'Plus Jakarta Sans', 'Poppins', sans-serif;
+  box-sizing: border-box;
 }
 
 html {
   scroll-behavior: smooth;
+  background-color: #FAF8F5;
+  color: #1C1917;
+}
+
+body {
+  background-color: #FAF8F5;
+  color: #1C1917;
+  overflow-x: hidden;
+}
+
+/* Custom warm scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #FAF8F5;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #D5CCC0;
+  border-radius: 8px;
+  border: 2px solid #FAF8F5;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #B8ABA0;
+}
+
+/* Selection Color */
+::selection {
+  background-color: #FEF3C7;
+  color: #92400E;
 }
 
 @layer utilities {
-    .clip-path-custom {
-      clip-path: polygon(0 0, 100% 0, 100% 98%, 75% 95%, 0 100%);
-    }
-    .clip-path-custom-2 {
-        clip-path: polygon(0 0, 100% 0, 100% 98%, 25% 95%, 0 100%);
-      }
-    .clip-path-custom-3 {
-        clip-path: polygon(0 0, 100% 0, 100% 98%, 75% 96%, 0 100%);
-      }
+  .clip-path-custom {
+    clip-path: polygon(0 0, 100% 0, 100% 98%, 75% 95%, 0 100%);
   }
-  
+  .clip-path-custom-2 {
+    clip-path: polygon(0 0, 100% 0, 100% 98%, 25% 95%, 0 100%);
+  }
+  .clip-path-custom-3 {
+    clip-path: polygon(0 0, 100% 0, 100% 98%, 75% 96%, 0 100%);
+  }
+  .warm-glass {
+    background: rgba(255, 255, 255, 0.82);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(235, 229, 219, 0.9);
+  }
+  .warm-glass-card {
+    background: rgba(255, 255, 255, 0.92);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid #EBE5DB;
+  }
+}
