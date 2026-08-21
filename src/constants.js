@@ -340,6 +340,7 @@ export const certifications = [
     title: "Oracle Cloud Infrastructure AI Foundations Associate",
     issuer: "Oracle University",
     category: "Artificial Intelligence",
+    credentialUrl: "https://catalog-education.oracle.com/ords/certview/sharebadge?id=158980A228923CB29593BAEC32683AA16555E131BC14DC6CB25F742DE3802FFA",
     badgeColor: "from-red-500 to-amber-600",
     icon: "oracle",
     description: "Demonstrates foundational mastery of Artificial Intelligence, Machine Learning, Deep Learning, Natural Language Processing, and Generative AI service capabilities on Oracle Cloud.",
@@ -350,6 +351,7 @@ export const certifications = [
     title: "Hack Heist 2.0 Hackathon Participant",
     issuer: "MIET Meerut",
     category: "Hackathons & Competitions",
+    credentialUrl: "https://drive.google.com/file/d/1abGG3livWjWNRV4uzjEyR7WT7sjAiGwd/view?usp=drive_link",
     badgeColor: "from-amber-600 to-yellow-600",
     icon: "hackathon",
     description: "Participated in an intensive collegiate hackathon building innovative software solutions under rapid turnaround, focusing on UX design, teamwork, and MERN stack implementation.",
@@ -360,6 +362,7 @@ export const certifications = [
     title: "Data Structures and Algorithms",
     issuer: "Apna College",
     category: "Computer Science",
+    credentialUrl: "https://drive.google.com/file/d/1mM3rFn3tb_MNr3al2gmzF_bR3gTLwZc/view?usp=sharing",
     badgeColor: "from-stone-700 to-stone-900",
     icon: "dsa",
     description: "Comprehensive training in algorithmic thinking, asymptotic time-space complexity, arrays, linked lists, recursion, trees, graphs, sorting, searching, and dynamic programming.",
@@ -405,8 +408,8 @@ export const techEvents = [
       "Pitched solution and live demo to the judging panel"
     ],
     tags: ["MERN Stack", "Rapid Prototyping", "Teamwork", "Hackathon"],
-    link: "https://www.linkedin.com/in/akshay-jain-8816252a5/",
-    linkText: "View Post / Details"
+    link: "https://drive.google.com/file/d/1abGG3livWjWNRV4uzjEyR7WT7sjAiGwd/view?usp=drive_link",
+    linkText: "View Certificate"
   },
   {
     id: 3,
