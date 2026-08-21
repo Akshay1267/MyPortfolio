@@ -370,6 +370,26 @@ export const certifications = [
 export const techEvents = [
   {
     id: 1,
+    title: "0xGenIgnite Bootcamp (Powered by Stellar)",
+    category: "Bootcamps",
+    role: "Attendee & Web3 Builder",
+    organizer: "Genesis Community & Stellar (Microsoft Noida)",
+    date: "2024",
+    location: "Microsoft Office, Noida, UP",
+    status: "Completed",
+    badgeColor: "from-purple-600 to-indigo-600",
+    description: "Attended an intensive Web3 Bootcamp powered by Stellar and hosted by Genesis Community at Microsoft Office, Noida. Participated in deep-dive hands-on blockchain sessions, decentralized architecture, and networking with industry leaders.",
+    highlights: [
+      "Hands-on sessions on Web3 & Stellar blockchain infrastructure beyond theory",
+      "Gained practical architectural insights from industrial mentors and Web3 natives",
+      "Collaborated and networked with brilliant builders and innovators across the ecosystem"
+    ],
+    tags: ["Web3", "Blockchain", "Stellar", "Microsoft Noida", "Smart Contracts", "Networking"],
+    link: "https://www.linkedin.com/posts/akshay-jain-8816252a5_web3-blockchain-learning-activity-7375949101189939200-0STl",
+    linkText: "View LinkedIn Post"
+  },
+  {
+    id: 2,
     title: "Hack Heist 2.0 Hackathon",
     category: "Hackathons",
     role: "Participant & Full Stack Dev",
@@ -389,7 +409,7 @@ export const techEvents = [
     linkText: "View Post / Details"
   },
   {
-    id: 2,
+    id: 3,
     title: "AWS Community Day & Cloud Summit",
     category: "Conferences",
     role: "Attendee",
@@ -409,7 +429,7 @@ export const techEvents = [
     linkText: "Event Recap"
   },
   {
-    id: 3,
+    id: 4,
     title: "Google Developer Groups (GDG) DevFest",
     category: "Conferences",
     role: "Attendee & Community Member",
@@ -429,7 +449,7 @@ export const techEvents = [
     linkText: "View Details"
   },
   {
-    id: 4,
+    id: 5,
     title: "MERN Stack & Cloud Scalability Workshop",
     category: "Workshops",
     role: "Active Participant",

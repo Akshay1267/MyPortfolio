@@ -10,7 +10,7 @@ import {
   FiBookmark,
   FiActivity
 } from "react-icons/fi";
-import { FaTrophy, FaLaptopCode, FaMicrophoneAlt, FaChalkboardTeacher } from "react-icons/fa";
+import { FaTrophy, FaLaptopCode, FaMicrophoneAlt, FaChalkboardTeacher, FaRocket } from "react-icons/fa";
 
 const getCategoryIcon = (category) => {
   switch (category) {
@@ -20,6 +20,8 @@ const getCategoryIcon = (category) => {
       return <FaMicrophoneAlt className="text-blue-600" />;
     case "Workshops":
       return <FaChalkboardTeacher className="text-emerald-600" />;
+    case "Bootcamps":
+      return <FaRocket className="text-purple-600" />;
     default:
       return <FaLaptopCode className="text-stone-700" />;
   }
@@ -33,6 +35,8 @@ const getCategoryBadgeClass = (category) => {
       return "bg-blue-50 text-blue-900 border-blue-200";
     case "Workshops":
       return "bg-emerald-50 text-emerald-900 border-emerald-200";
+    case "Bootcamps":
+      return "bg-purple-50 text-purple-900 border-purple-200";
     default:
       return "bg-warm-100 text-stone-700 border-warm-200";
   }
@@ -41,7 +45,7 @@ const getCategoryBadgeClass = (category) => {
 const Events = () => {
   const [filter, setFilter] = useState("All");
 
-  const categories = ["All", "Hackathons", "Conferences", "Workshops"];
+  const categories = ["All", ...Array.from(new Set(techEvents.map((item) => item.category)))];
 
   const filteredEvents = techEvents.filter((item) => {
     if (filter === "All") return true;
