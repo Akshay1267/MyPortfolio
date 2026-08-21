@@ -48,6 +48,7 @@ export const PersonalDetails = {
   youtube: "https://www.youtube.com/@Code2CareerByAkshay",
   instagram: "https://www.instagram.com/akshay_jain86/",
   twitter: "https://x.com/jain86845",
+  x: "https://x.com/jain86845",
   aboutBio: "I am a passionate Full Stack Developer and MCA student at Meerut Institute of Engineering and Technology (MIET). With a strong foundation in the MERN stack (MongoDB, Express.js, React.js, Node.js) and CS fundamentals, I build reliable, high-performance web applications focused on usability, clean architecture, and modern UX workflows. From mental health early-warning systems to enterprise workflow platforms, I love translating complex challenges into intuitive, scalable software.",
   stats: [
     { label: "Projects Completed", value: "10+" },
@@ -365,3 +366,87 @@ export const certifications = [
     skills: ["Data Structures", "Algorithms", "Time Complexity", "Problem Solving"],
   },
 ];
+
+export const techEvents = [
+  {
+    id: 1,
+    title: "Hack Heist 2.0 Hackathon",
+    category: "Hackathons",
+    role: "Participant & Full Stack Dev",
+    organizer: "MIET Meerut",
+    date: "2024",
+    location: "Meerut, UP",
+    status: "Completed",
+    badgeColor: "from-amber-600 to-orange-500",
+    description: "Participated in an intensive 24-hour collegiate hackathon building full-stack web solutions under rapid turnaround, focusing on user-centric product architecture, team collaboration, and real-time API integrations.",
+    highlights: [
+      "Built a complete end-to-end full-stack prototype in under 24 hours",
+      "Collaborated in a multi-disciplinary team using Git & agile sprint practices",
+      "Pitched solution and live demo to the judging panel"
+    ],
+    tags: ["MERN Stack", "Rapid Prototyping", "Teamwork", "Hackathon"],
+    link: "https://www.linkedin.com/in/akshay-jain-8816252a5/",
+    linkText: "View Post / Details"
+  },
+  {
+    id: 2,
+    title: "AWS Community Day & Cloud Summit",
+    category: "Conferences",
+    role: "Attendee",
+    organizer: "AWS User Group",
+    date: "2024",
+    location: "Delhi NCR, India",
+    status: "Attended",
+    badgeColor: "from-blue-600 to-indigo-600",
+    description: "Engaged in in-depth technical sessions on AWS cloud architecture, serverless design patterns, generative AI workloads on Bedrock, and containerized microservices orchestration.",
+    highlights: [
+      "Attended keynotes on Cloud Native architectures and Serverless best practices",
+      "Explored hands-on architectures for scalable MERN apps with AWS S3 and EC2",
+      "Networked with cloud architects, DevOps engineers, and AWS Community Heroes"
+    ],
+    tags: ["AWS", "Cloud Computing", "Serverless", "GenAI", "Networking"],
+    link: "https://www.linkedin.com/in/akshay-jain-8816252a5/",
+    linkText: "Event Recap"
+  },
+  {
+    id: 3,
+    title: "Google Developer Groups (GDG) DevFest",
+    category: "Conferences",
+    role: "Attendee & Community Member",
+    organizer: "Google Developer Groups (GDG)",
+    date: "2024",
+    location: "Delhi NCR / Noida",
+    status: "Attended",
+    badgeColor: "from-red-500 to-amber-500",
+    description: "Participated in one of the largest community-led tech developer conferences covering modern web development, Flutter, Gemini AI APIs, Android engineering, and system design.",
+    highlights: [
+      "Attended deep-dive tracks on modern React, Web Performance, and Gemini AI integration",
+      "Participated in live coding sessions and architecture workshops",
+      "Connected with senior engineers and tech leaders across the Indian developer ecosystem"
+    ],
+    tags: ["Web Dev", "Google AI", "Gemini API", "Open Source", "Community"],
+    link: "https://www.linkedin.com/in/akshay-jain-8816252a5/",
+    linkText: "View Details"
+  },
+  {
+    id: 4,
+    title: "MERN Stack & Cloud Scalability Workshop",
+    category: "Workshops",
+    role: "Active Participant",
+    organizer: "MIET Tech Society",
+    date: "2024",
+    location: "Meerut, UP",
+    status: "Completed",
+    badgeColor: "from-emerald-600 to-teal-600",
+    description: "Hands-on developer workshop focusing on advanced state management, REST API security, JWT authentication patterns, and database indexing with MongoDB.",
+    highlights: [
+      "Practiced secure token handling, refresh tokens, and OAuth flows",
+      "Implemented MongoDB performance optimization and query indexing techniques",
+      "Refactored full-stack workflows for seamless production deployment"
+    ],
+    tags: ["React.js", "Node.js", "MongoDB", "Auth & Security", "Performance"],
+    link: "https://www.linkedin.com/in/akshay-jain-8816252a5/",
+    linkText: "Workshop Info"
+  }
+];
+

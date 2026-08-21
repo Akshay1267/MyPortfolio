@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { FiMenu, FiX, FiExternalLink } from "react-icons/fi";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
 import { SiLeetcode } from "react-icons/si";
 import { PersonalDetails } from "../../constants";
 
@@ -13,7 +14,7 @@ const Navbar = () => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 30);
 
-      const sections = ["about", "skills", "projects", "education", "certifications", "contact"];
+      const sections = ["about", "skills", "projects", "education", "certifications", "events", "contact"];
       const scrollPosition = window.scrollY + 200;
 
       for (const sectionId of sections) {
@@ -55,6 +56,7 @@ const Navbar = () => {
     { id: "projects", label: "Projects" },
     { id: "education", label: "Education" },
     { id: "certifications", label: "Certifications" },
+    { id: "events", label: "Events" },
     { id: "contact", label: "Contact" },
   ];
 
@@ -119,6 +121,15 @@ const Navbar = () => {
               <FaGithub size={20} />
             </a>
             <a
+              href={PersonalDetails.x || PersonalDetails.twitter}
+              target="_blank"
+              rel="noopener noreferrer"
+              title="X (Twitter) Profile"
+              className="p-2 rounded-xl text-stone-600 hover:text-stone-900 hover:bg-stone-100 transition-colors border border-transparent hover:border-stone-200"
+            >
+              <FaXTwitter size={19} />
+            </a>
+            <a
               href={PersonalDetails.leetcode}
               target="_blank"
               rel="noopener noreferrer"
@@ -181,30 +192,42 @@ const Navbar = () => {
           </ul>
 
           <div className="mt-4 pt-4 border-t border-warm-200 flex items-center justify-between">
-            <div className="flex space-x-3">
+            <div className="flex space-x-2">
               <a
                 href={PersonalDetails.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
+                title="LinkedIn Profile"
                 className="p-2 rounded-lg bg-warm-100 text-stone-700 hover:text-amber-700"
               >
-                <FaLinkedin size={20} />
+                <FaLinkedin size={18} />
               </a>
               <a
                 href={PersonalDetails.github}
                 target="_blank"
                 rel="noopener noreferrer"
+                title="GitHub Profile"
                 className="p-2 rounded-lg bg-warm-100 text-stone-700 hover:text-stone-900"
               >
-                <FaGithub size={20} />
+                <FaGithub size={18} />
+              </a>
+              <a
+                href={PersonalDetails.x || PersonalDetails.twitter}
+                target="_blank"
+                rel="noopener noreferrer"
+                title="X Profile"
+                className="p-2 rounded-lg bg-warm-100 text-stone-700 hover:text-stone-900"
+              >
+                <FaXTwitter size={18} />
               </a>
               <a
                 href={PersonalDetails.leetcode}
                 target="_blank"
                 rel="noopener noreferrer"
+                title="LeetCode Profile"
                 className="p-2 rounded-lg bg-warm-100 text-stone-700 hover:text-amber-600"
               >
-                <SiLeetcode size={20} />
+                <SiLeetcode size={18} />
               </a>
             </div>
 

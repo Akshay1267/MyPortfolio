@@ -1,5 +1,6 @@
 import React from "react";
-import { FaLinkedin, FaGithub, FaYoutube, FaInstagram, FaTwitter } from "react-icons/fa";
+import { FaLinkedin, FaGithub, FaYoutube, FaInstagram } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
 import { SiLeetcode } from "react-icons/si";
 import { PersonalDetails } from "../../constants";
 
@@ -23,16 +24,17 @@ const Footer = () => {
     { name: "Projects", id: "projects" },
     { name: "Education", id: "education" },
     { name: "Certifications", id: "certifications" },
+    { name: "Events", id: "events" },
     { name: "Contact", id: "contact" },
   ];
 
   const socialLinks = [
     { icon: <FaLinkedin size={18} />, link: PersonalDetails.linkedin, label: "LinkedIn" },
     { icon: <FaGithub size={18} />, link: PersonalDetails.github, label: "GitHub" },
+    { icon: <FaXTwitter size={17} />, link: PersonalDetails.x || PersonalDetails.twitter, label: "X (Twitter)" },
     { icon: <SiLeetcode size={18} />, link: PersonalDetails.leetcode, label: "LeetCode" },
     { icon: <FaYoutube size={18} />, link: PersonalDetails.youtube, label: "YouTube" },
     { icon: <FaInstagram size={18} />, link: PersonalDetails.instagram, label: "Instagram" },
-    { icon: <FaTwitter size={18} />, link: PersonalDetails.twitter, label: "Twitter" },
   ];
 
   return (

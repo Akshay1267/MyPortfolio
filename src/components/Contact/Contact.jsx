@@ -4,6 +4,7 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { PersonalDetails } from "../../constants";
 import { FiMail, FiPhone, FiMapPin, FiSend, FiCheckCircle, FiLinkedin, FiGithub } from "react-icons/fi";
+import { FaXTwitter } from "react-icons/fa6";
 import { SiLeetcode } from "react-icons/si";
 
 const Contact = () => {
@@ -154,6 +155,15 @@ const Contact = () => {
                   title="GitHub"
                 >
                   <FiGithub size={18} />
+                </a>
+                <a
+                  href={PersonalDetails.x || PersonalDetails.twitter}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="p-3 rounded-xl bg-warm-100 hover:bg-stone-900 hover:text-white text-stone-700 border border-warm-200 transition-all shadow-warm-sm"
+                  title="X (Twitter)"
+                >
+                  <FaXTwitter size={18} />
                 </a>
                 <a
                   href={PersonalDetails.leetcode}
