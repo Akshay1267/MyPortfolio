@@ -477,7 +477,7 @@ export const techEvents = [
     category: "Workshops",
     role: "Attendee & AI Builder",
     organizer: "GDG Gurugram & TFUG Ghaziabad (Paytm Partner)",
-    date: "October 2024",
+    date: "October 2026",
     location: "Paytm Office, Noida, UP",
     status: "Completed",
     badgeColor: "from-blue-600 to-emerald-600",
