@@ -470,6 +470,27 @@ export const techEvents = [
     tags: ["React.js", "Node.js", "MongoDB", "Auth & Security", "Performance"],
     link: "https://www.linkedin.com/in/akshay-jain-8816252a5/",
     linkText: "Workshop Info"
+  },
+  {
+    id: 6,
+    title: "Code for Communities: Hands-on Workshop with Google AI",
+    category: "Workshops",
+    role: "Attendee & AI Builder",
+    organizer: "GDG Gurugram & TFUG Ghaziabad (Paytm Partner)",
+    date: "October 2024",
+    location: "Paytm Office, Noida, UP",
+    status: "Completed",
+    badgeColor: "from-blue-600 to-emerald-600",
+    description: "Attended an intensive hands-on workshop on building with Google AI at the Paytm Noida office, organized by GDG Gurugram and TensorFlow User Group Ghaziabad (TFUG Ghaziabad). Deep-dived into real-time conversational agents and multimodal agentic pipelines.",
+    highlights: [
+      "Explored conversational AI agent architectures using the Gemini Live API",
+      "Learned agentic video processing pipelines and AI-driven automated content creation",
+      "Participated in collaborative product use-case discussions and live architecture reviews",
+      "Networked with AI engineers, industry speakers from Handshake AI & Appy Pie, and tech leaders"
+    ],
+    tags: ["Google AI", "Gemini Live API", "Generative AI", "Agentic AI", "GDG", "Paytm Noida"],
+    link: "https://lnkd.in/p/gU86_K5K",
+    linkText: "View LinkedIn Post"
   }
 ];
 
